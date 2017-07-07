@@ -1,4 +1,4 @@
-FROM imhuwq/ubuntu_base:16.04
+FROM imhuwq/ubuntu
 MAINTAINER imhuwq "imhuwq@gmail.com"
 
 RUN mkdir -p /jetBrains
