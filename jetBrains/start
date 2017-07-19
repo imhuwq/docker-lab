@@ -7,7 +7,7 @@ else
 fi
 
 sudo docker rm -f jet_brains;
-sudo docker run -d -p $port:8888 --name jet_brains imhuwq/jet_brains
+sudo docker run -d --restart always -p $port:8888 --name jet_brains imhuwq/jet_brains
 
 echo ""
 sudo docker port jet_brains
