@@ -13,5 +13,7 @@ WORKDIR /tmp/Python-3.5.3
 RUN ./configure
 RUN make install
 RUN ln -s /usr/local/bin/python3 /usr/bin/python
-
+RUN ln -s /usr/local/bin/pip3 /usr/bin/pip
 WORKDIR /root
+
+CMD /usr/bin/python
