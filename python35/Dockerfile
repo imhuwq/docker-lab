@@ -12,8 +12,16 @@ RUN tar -xzvf Python-3.5.3.tgz
 WORKDIR /tmp/Python-3.5.3
 RUN ./configure
 RUN make install
+
+WORKDIR /root
 RUN ln -s /usr/local/bin/python3 /usr/bin/python
 RUN ln -s /usr/local/bin/pip3 /usr/bin/pip
-WORKDIR /root
+RUN mkdir -p .pip
+ADD pip.conf .pip/pip.conf
 
-CMD /usr/bin/python
+
+RUN mkdir -p /data/repo
+ONBUILD ADD $PWD /data/repo
+ONBUILD WORKDIR /data/repo
+ONBUILD RUN pip install -r requirements.txt
+

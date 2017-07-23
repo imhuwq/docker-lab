@@ -1,10 +1,10 @@
 FROM imhuwq/ubuntu
 MAINTAINER imhuwq "imhuwq@gmail.com"
 
-RUN mkdir -p /jetBrains
-ADD lserver /jetBrains
+RUN mkdir -p /data/jetbrains
+ADD lserver /data/jetbrains
 
-WORKDIR /jetBrains
+WORKDIR /data/jetbrains
 
 EXPOSE 8888
 
