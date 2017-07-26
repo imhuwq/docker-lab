@@ -1,4 +1,6 @@
 #!/bin/bash
 
 sudo docker rm -f dev-pack
-sudo docker run --name dev-pack -it imhuwq/dev-pack /bin/bash
+sudo docker run -it \
+		--name dev-pack \
+		imhuwq/dev-pack /bin/bash
