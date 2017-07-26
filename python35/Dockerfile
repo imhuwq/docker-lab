@@ -19,8 +19,6 @@ RUN ln -s /usr/local/bin/pip3 /usr/bin/pip
 RUN mkdir -p .pip
 ADD pip.conf .pip/pip.conf
 
-
-RUN mkdir -p /data/repo
 ONBUILD ADD $PWD /data/repo
 ONBUILD WORKDIR /data/repo
 ONBUILD RUN pip install -r requirements.txt
