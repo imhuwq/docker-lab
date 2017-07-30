@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo docker rm -f python3.5
-sudo docker run -it --name python3.5 imhuwq/python3.5 /bin/bash
+sudo docker rm -f python35
+sudo docker run -it --name python35 imhuwq/python35 /bin/bash
