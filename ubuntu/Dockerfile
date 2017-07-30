@@ -2,5 +2,4 @@
 FROM ubuntu:16.04
 MAINTAINER imhuwq "imhuwq@gmail.com"
 COPY sources.list /etc/apt/sources.list
-RUN apt update
-RUN apt install -y vim
+RUN apt update && apt install -y vim
