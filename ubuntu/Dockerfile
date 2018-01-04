@@ -38,3 +38,13 @@ RUN cd /tmp && wget http://mirrors.sohu.com/python/2.7.12/Python-2.7.12.tgz && \
 
 # 清理工作
 RUN apt-get autoremove
+
+# 创建 deploy 用户
+RUN echo "#!/bin/bash\nadduser deploy << EOF\n11235813Deploy\n11235813Deploy\ndeploy\n\n\n\nY\nEOF" >> create_deploy.sh && \
+    chmod 755 create_deploy.sh && ./create_deploy.sh && gpasswd -a deploy sudo
+
+ADD pip.conf /home/deploy/.pip/pip.conf
+RUN chown -R deploy:deploy /home/deploy/.pip
+
+WORKDIR /home/deploy
+USER deploy
