@@ -1,0 +1,10 @@
+{
+  "registry-mirrors": [
+    "http://83d4602e.m.daocloud.io"
+  ],
+  "graph": "/data/docker",
+  "dns": [
+    "223.5.5.5",
+    "223.6.6.6"
+  ]
+}
