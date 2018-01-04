@@ -1,5 +1,4 @@
 FROM imhuwq/ubuntu
-MAINTAINER imhuwq "imhuwq@gmail.com"
 
 RUN mkdir -p /data/jetbrains
 ADD lserver /data/jetbrains
