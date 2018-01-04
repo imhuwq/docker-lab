@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo docker stop jet_brains;
-sudo docker rm -f jet_brains;
+docker stop jet_brains;
+docker rm -f jet_brains;

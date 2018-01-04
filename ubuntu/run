@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker rm -f ubuntu
+docker run -it --name ubuntu --dns=223.5.5.5 imhuwq/ubuntu /bin/bash

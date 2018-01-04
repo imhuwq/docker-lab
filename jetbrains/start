@@ -6,18 +6,18 @@ else
     port=8888
 fi
 
-sudo docker rm -f jetbrains;
-sudo docker run --detach \
+docker rm -f jetbrains;
+docker run --detach \
                 --restart always \
                 --publish $port:8888 \
                 --name jetbrains \
                 imhuwq/jetbrains
 
 echo ""
-sudo docker port jetbrains
+docker port jetbrains
 
 echo ""
 echo "The service has been started successfully, here are the logs: "
 echo ""
 
-sudo docker logs -f jetbrains;
+docker logs -f jetbrains;
