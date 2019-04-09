@@ -38,6 +38,7 @@ RUN apt-get update && \
 
 # 清理工作
     apt-get autoremove && \
+    cd /tmp && rm -rf /tmp/* && \
 
 # 创建 deploy 用户
     echo "#!/bin/bash\nadduser deploy << EOF\n11235813Deploy\n11235813Deploy\ndeploy\n\n\n\nY\nEOF" >> create_deploy.sh && \
